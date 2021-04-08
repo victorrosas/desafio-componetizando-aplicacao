@@ -7,12 +7,15 @@ import './styles/sidebar.scss';
 import './styles/content.scss';
 import { SideBar } from './components/SideBar';
 import { Content } from './components/Content';
+import { MoviesProvider } from './MovieContext';
 
 export function App() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <SideBar />
-      <Content />
-    </div>
+    <MoviesProvider>
+      <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <SideBar />
+        <Content />
+      </div>
+    </MoviesProvider>
   )
 }
